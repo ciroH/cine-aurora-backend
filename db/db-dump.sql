@@ -43,6 +43,26 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `salas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `salas` (
+  `id_sala` int NOT NULL,
+  `has_dolby` tinyint(1) NOT NULL DEFAULT '0',
+  `has_aircon` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_sala`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `salas`
+--
+
+LOCK TABLES `salas` WRITE;
+/*!40000 ALTER TABLE `salas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `salas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 DROP TABLE IF EXISTS `users`;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
