@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `admins`
+-- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admins`;
+DROP TABLE IF EXISTS `admin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `admins` (
+CREATE TABLE `admin` (
   `id` int NOT NULL,
   `mail` varchar(32) NOT NULL,
   `password` varchar(32) NOT NULL
@@ -30,22 +30,22 @@ CREATE TABLE `admins` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `admins`
+-- Dumping data for table `admin`
 --
 
-LOCK TABLES `admins` WRITE;
-/*!40000 ALTER TABLE `admins` DISABLE KEYS */;
-/*!40000 ALTER TABLE `admins` ENABLE KEYS */;
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `salas`
+-- Table structure for table `sala`
 --
 
-DROP TABLE IF EXISTS `salas`;
+DROP TABLE IF EXISTS `sala`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `salas` (
+CREATE TABLE `sala` (
   `id_sala` int NOT NULL,
   `has_dolby` tinyint(1) NOT NULL DEFAULT '0',
   `has_aircon` tinyint(1) NOT NULL DEFAULT '0',
@@ -54,22 +54,22 @@ CREATE TABLE `salas` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `salas`
+-- Dumping data for table `sala`
 --
 
-LOCK TABLES `salas` WRITE;
-/*!40000 ALTER TABLE `salas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `salas` ENABLE KEYS */;
+LOCK TABLES `sala` WRITE;
+/*!40000 ALTER TABLE `sala` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sala` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `users`
+-- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `users` (
+CREATE TABLE `user` (
   `id` int NOT NULL,
   `mail` varchar(32) NOT NULL,
   `password` varchar(32) NOT NULL,
@@ -78,12 +78,12 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `user`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -95,4 +95,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-03  9:31:50
+-- Dump completed on 2024-05-04  1:03:10
