@@ -39,6 +39,31 @@ LOCK TABLES `admin` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `asiento_salas`
+--
+
+DROP TABLE IF EXISTS `asiento_salas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `asiento_salas` (
+  `id_sala` int NOT NULL,
+  `nro_asiento` int NOT NULL,
+  `ocupado` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id_sala`,`nro_asiento`),
+  CONSTRAINT `asiento_salas_ibfk_1` FOREIGN KEY (`id_sala`) REFERENCES `sala` (`id_sala`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `asiento_salas`
+--
+
+LOCK TABLES `asiento_salas` WRITE;
+/*!40000 ALTER TABLE `asiento_salas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `asiento_salas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `sala`
 --
 
