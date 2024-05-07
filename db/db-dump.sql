@@ -110,6 +110,33 @@ LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `user_history`
+--
+
+DROP TABLE IF EXISTS `user_history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user_history` (
+  `id` int NOT NULL,
+  `date` datetime NOT NULL,
+  `price` decimal(10,2) unsigned NOT NULL,
+  `id_sala` int NOT NULL,
+  `id_asiento` int NOT NULL,
+  PRIMARY KEY (`id`,`date`),
+  CONSTRAINT `user_history_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_history`
+--
+
+LOCK TABLES `user_history` WRITE;
+/*!40000 ALTER TABLE `user_history` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_history` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -120,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-04  1:03:10
+-- Dump completed on 2024-05-07  0:53:24
