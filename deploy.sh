@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP-DIRECTORY= $PWD;
+APPDIRECTORY= $PWD;
 
 #---- install nvm (node manager) ----#
 
@@ -20,7 +20,7 @@ echo "...OK";
 #---- install express js (framework) ----#
 
 echo "INSTALL EXPRESS...";
-cd APP-DIRECTORY;
+cd $APPDIRECTORY;
 npm install express;
 echo "...OK";
 
